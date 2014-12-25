@@ -13,4 +13,6 @@ env CFLAGS=-fPIC ./configure --enable-static --disable-shared --prefix=$artifact
 make
 make install
 cd $artifact_dir
+mv lib/libffi-$VERSION/include .
+rm -rf lib/libffi-$VERSION
 tar czf $output_dir/libffi-$VERSION.tgz *
