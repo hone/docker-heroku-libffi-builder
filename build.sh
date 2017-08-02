@@ -15,4 +15,5 @@ make install
 cd $artifact_dir
 mv lib/libffi-$VERSION/include .
 rm -rf lib/libffi-$VERSION
-tar czf $output_dir/libffi-$VERSION.tgz *
+mkdir -p $output_dir/$STACK
+tar czf $output_dir/$STACK/libffi-$VERSION.tgz *
